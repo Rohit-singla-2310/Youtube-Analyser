@@ -1,0 +1,119 @@
+
+    body {
+        font-family: 'Redressed', cursive;
+        color: wheat;
+        margin: 0px;
+        padding: 0px;
+        background-image: url({{ url_for('static', filename='lamp11.jpeg') }})
+        backdrop-filter: blur(10px);
+        background-size: contain;
+    }
+
+    .left {
+        position: absolute;
+        left: 34px;
+        top: 20px;
+        display: inline-block;
+    }
+
+    .left img {
+        width: 120px;
+        filter: invert(100%);
+    }
+
+    .left div {
+        text-align: center;
+    }
+
+    .mid {
+        display: block;
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    .right {
+        display: inline-block;
+        margin-left: 92%;
+        margin-top: -5%;
+    }
+
+    .right img {
+        width: 120px;
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        font-size: 30px;
+        color: wheat;
+        display: inline-block;
+    }
+
+    .navbar li a {
+        color: wheat;
+        text-decoration: none;
+        padding: 34px 54px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a:active {
+        text-decoration: underline;
+        color: teal;
+    }
+
+    .container {
+
+        margin: 150px 400px;
+        padding: 18px 12px;
+        padding-bottom: 500px;
+
+    }
+
+
+
+    .btn {
+        font-family: 'Lato', sans-serif;
+        margin: -78px 710px;
+        color: black;
+        background-color: powderblue;
+        padding: 9px 48px;
+        border-radius: 10px;
+        border: 2px solid yellow;
+        font-size: 27px;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .btn:hover {
+        color: wheat;
+        background-color: black;
+        text-decoration: underline;
+    }
+
+    #about {
+
+        margin: 250px 420px;
+        padding: 100px 90px;
+        padding-top: 50px;
+        width: 700px;
+        display: block;
+        position: absolute;
+        align-content: center;
+        color: honeydew;
+        font-size: 20px;
+    }
+      #result {
+
+        margin: 250px 420px;
+        padding: 100px 90px;
+        padding-top: 50px;
+        width: 700px;
+        display: block;
+        position: absolute;
+        align-content: center;
+        color: honeydew;
+        font-size: 20px;
+    }
+

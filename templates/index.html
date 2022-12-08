@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Analysis</title>
+</head>
+
+
+<!--<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">-->
+<!--<link rel="stylesheet" href="styles.css">-->
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+<style>
+    .popi{
+        display: block;
+        width: 500px;
+        margin: 2px 9px;
+        padding: 15px 90px;
+        border: 2px solid whitesmoke;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+</style>
+<body style="background-image: url({{ url_for('static', filename='lamp11.jpeg') }});background-repeat: no-repeat;background-size:cover;background-attachment:fixed;">
+
+<header class="header">
+        <!-- for logo -->
+        <div class="left">
+             <img src="{{url_for('static', filename='logo.jpeg')}}" />
+
+<!--            <img src="logo.jpeg" alt=""></img>-->
+            <div>Analyse your Video</div>
+        </div>
+        <!-- for Navigation bar -->
+
+        <!-- for logo1 -->
+        <div class="right">
+            <img src="{{url_for('static', filename='logo2.jpeg')}}" />
+        </div>
+        <div id="about" style="border-width:0px " >
+            <h1>Results:</h1>
+            <br><br>
+        </div>
+</header>
+
+ <div class="container">
+
+     <form action="{{ url_for('predict')}}" method="post">
+    	<input class="popi" type="url" name="percent biking" placeholder="Enter YoutubeVideo URL" required="required" /><br>
+        <button style="margin-top:-78px" type="submit" class="btn">Analyse</button>
+    </form>
+
+   <br>
+   <br>
+
+   <h4 style="color:#fff700;text-align:center;font-size:1.5rem;margin-left: 100px;margin-right: -50px;" >
+        {{ prediction_text }}<br>
+        {{ negative }}<br>
+        {{ neutral }}
+
+   </h4>
+
+ </div>
+
+</body>
+</html>
+
